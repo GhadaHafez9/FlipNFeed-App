@@ -51,18 +51,22 @@ class _RegisterPageState extends State<RegisterPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.lock_open_rounded,
-              color: Theme.of(context).colorScheme.inversePrimary,
-              size: 100,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/only-logo.png',
+                  //height: 300,
+                ),
+              ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 14),
             Text(
               "Let's create an account for you ",
               style: TextStyle(
-                fontSize: 16,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
+                  fontSize: 16,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 25),
             MyTextfield(

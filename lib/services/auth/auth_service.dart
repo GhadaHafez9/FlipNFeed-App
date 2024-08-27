@@ -17,7 +17,21 @@ class AuthService {
       );
       return userCredential;
     } on FirebaseAuthException catch (e) {
-      throw Exception(e.code);
+      String errorMessage = '';
+
+      switch (e.code) {
+        case 'user-not-found':
+          errorMessage =
+              'User not found. Please check your email and try again.';
+          break;
+        case 'wrong-password':
+          errorMessage = 'Incorrect password. Please try again.';
+          break;
+        default:
+          errorMessage = 'You need to sign in first ';
+      }
+
+      throw Exception(errorMessage);
     }
   }
 
@@ -31,7 +45,18 @@ class AuthService {
       );
       return userCredential;
     } on FirebaseAuthException catch (e) {
-      throw Exception(e.code);
+      String errorMessage = '';
+
+      switch (e.code) {
+        case 'user-not-found':
+          errorMessage =
+              'User not found. Please check your email and try again.';
+          break;
+        default:
+          errorMessage = 'You need to sign up first ';
+      }
+
+      throw Exception(errorMessage);
     }
   }
 

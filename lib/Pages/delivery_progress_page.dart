@@ -63,7 +63,7 @@ class _DeliveryProgressPageState extends State<DeliveryProgressPage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Zyad ",
+                "Your driver",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 18,

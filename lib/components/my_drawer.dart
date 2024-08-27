@@ -19,10 +19,9 @@ class MyCustDrawer extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 100.0),
-            child: Icon(
-              Icons.lock_open_rounded,
-              size: 40,
-              color: Theme.of(context).colorScheme.inversePrimary,
+            child: Image.asset(
+              'assets/images/only-logo.png',
+              height: 100,
             ),
           ),
           Padding(

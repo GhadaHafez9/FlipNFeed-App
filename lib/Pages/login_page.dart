@@ -50,18 +50,22 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.lock_open_rounded,
-              color: Theme.of(context).colorScheme.inversePrimary,
-              size: 100,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/only-logo.png',
+                  // height: 280,
+                ),
+              ],
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 8),
             Text(
-              'Food Delivery App',
+              'FlipNFeed',
               style: TextStyle(
-                fontSize: 16,
-                color: Theme.of(context).colorScheme.inversePrimary,
-              ),
+                  fontSize: 23,
+                  color: Theme.of(context).colorScheme.inversePrimary,
+                  fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 25),
             MyTextfield(

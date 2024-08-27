@@ -15,7 +15,11 @@ class CartPage extends StatelessWidget {
 
       return Scaffold(
         appBar: AppBar(
-          title: const Text("Cart"),
+          title: const Text(
+            "Cart",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+          ),
+          centerTitle: true,
           backgroundColor: Colors.transparent,
           foregroundColor: Theme.of(context).colorScheme.inversePrimary,
           actions: [
@@ -49,7 +53,10 @@ class CartPage extends StatelessWidget {
                   userCart.isEmpty
                       ? const Expanded(
                           child: Center(
-                            child: Text("Cart is empty ...."),
+                            child: Text(
+                              "Cart is empty ....",
+                              style: TextStyle(fontSize: 20),
+                            ),
                           ),
                         )
                       : Expanded(

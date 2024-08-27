@@ -30,7 +30,11 @@ class MySliverBar extends StatelessWidget {
       ],
       backgroundColor: Theme.of(context).colorScheme.surface,
       foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-      title: const Center(child: Text('Sunset Diner')),
+      title: const Center(
+          child: Text(
+        'FlipNFeed',
+        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+      )),
       flexibleSpace: FlexibleSpaceBar(
         background: Padding(
           padding: const EdgeInsets.only(bottom: 50.0),

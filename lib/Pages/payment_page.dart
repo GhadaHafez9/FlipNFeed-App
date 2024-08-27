@@ -61,7 +61,12 @@ class _PaymentPageState extends State<PaymentPage> {
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: const Text("Chekout"),
+        title: Text(
+          "Chekout",
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.primary),
+        ),
         centerTitle: true,
       ),
       body: Column(

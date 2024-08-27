@@ -1,47 +1,45 @@
-// import 'package:flutter/material.dart';
+import 'dart:async';
 
-// class SplashPage extends StatefulWidget {
-//   const SplashPage({super.key});
+import 'package:flutter/material.dart';
+import 'package:food_delivery_app/services/auth/auth_gate.dart';
 
-//   @override
-//   State<SplashPage> createState() => _SplashPageState();
-// }
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
 
-// class _SplashPageState extends State<SplashPage> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//        body: Container(
-//         child: Stack(
-//           children: [
-//             Padding(
-//               padding: const EdgeInsets.only(top: 0, left: 10),
-//               child: Center(
-//                 child: FractionallySizedBox(
-//                   widthFactor: 5,
-//                   heightFactor: 1,
-//                   child: SvgPicture.asset(
-//                     'assets/only-logo.svg',
-//                     fit: BoxFit.contain,
-//                     color: Color(0xFFFFFFFF).withOpacity(0.03),
-//                   ),
-//                 ),
-//               ),
-//             ),
-//             Align(
-//               alignment: Alignment.center,
-//               child: Padding(
-//                 padding: EdgeInsets.all(0.20),
-//                 child: SvgPicture.asset(
-//                   'assets/anti-ai logo.svg',
-//                   height: 350,
-//                   width: 300,
-//                 ),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     );
-//   }
-// }
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    Timer(const Duration(seconds: 4), () {
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const AuthGate()));
+    });
+
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.surface,
+      body: Stack(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.all(0.20),
+              child: Image.asset(
+                'assets/images/all-logo.png',
+                height: 450,
+                width: 450,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
